@@ -8,15 +8,15 @@ fetch(NEWS_API_URL)
 		const { articles } = res;
 		console.log(articles);
 
-		// articles.slice(0, 10).forEach((article) => {
-		// 	articleContent += `
-		//   <article>
-		//     <img src="${article.urlToImage}" alt="${article.title}" />
-		//     <a href="${article.url}">${article.title}</a>
-		//     <p>${article.description}</p>
-		//   </article>
-		//   `;
-		// });
+		articles.slice(0, 10).forEach((article) => {
+			articleContent += `
+      <article>
+        <img src="${article.urlToImage}" alt="${article.title}" />
+        <a href="${article.url}">${article.title}</a>
+        <p>${article.description}</p>
+      </article>
+      `;
+		});
 
-		// content.innerHTML = articleContent;
+		content.innerHTML = articleContent;
 	});
